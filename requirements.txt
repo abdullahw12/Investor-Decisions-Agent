@@ -1,0 +1,6 @@
+discord.py
+weaviate-client
+openai
+tiktoken
+langchain
+python-dotenv

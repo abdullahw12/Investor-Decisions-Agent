@@ -1,0 +1,5 @@
+FriendliAI One-Pager | https://friendli.ai
+FriendliAI builds efficient inference infrastructure for LLMs. The company focuses on reducing compute costs while maintaining high performance.
+It partners with enterprise clients to deploy optimized models on their own hardware or via FriendliAI's managed service.
+The team previously developed performance libraries for TPU and GPU architectures.
+Current traction includes multiple pilot deployments with early revenue.
