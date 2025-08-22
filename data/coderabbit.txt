@@ -1,0 +1,5 @@
+CodeRabbit One-Pager | https://coderabbit.ai
+CodeRabbit offers AI-powered code review for Git repositories. It integrates with CI pipelines to provide automated code feedback.
+The product supports multiple programming languages and highlights style issues, bugs, and security concerns.
+Founders are ex-Google engineers with experience in large-scale code analysis.
+Early adopters include several open-source maintainers and small SaaS teams.

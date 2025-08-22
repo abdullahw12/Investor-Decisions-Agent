@@ -1,0 +1,5 @@
+Weaviate One-Pager | https://weaviate.io
+Weaviate is an open-source vector database designed for building AI-native applications. It stores data objects and vector embeddings to enable semantic search and retrieval.
+The platform supports hybrid search, GraphQL, and modular extensions for various vectorizers.
+The company offers a managed cloud service and an active community.
+Recent releases include enhanced sharding and replication features for scalability.
