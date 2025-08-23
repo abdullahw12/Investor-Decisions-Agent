@@ -2,24 +2,36 @@
 from __future__ import annotations
 
 SYSTEM_PROMPT = (
-    "You are a venture analyst. Use ONLY the provided context. "
-    "If insufficient, reply exactly: \"Not enough evidence.\" "
-    "Score each pillar 0–5 from evidence present. Return concise JSON only."
+    "You are a venture analyst. Use ONLY the provided context to generate investment analysis. "
+    "If insufficient information, reply exactly: \"Not enough evidence.\" "
+    "Score each pillar 0–5 based on evidence present. "
+    "You MUST return valid JSON format only, no additional text or explanations."
 )
 
 USER_TEMPLATE = (
-    "Startup: {name}\n"
-    "Investor constraints: stage={stage}, check_size={check_size}, horizon={horizon}\n\n"
+    "Company: {name}\n"
+    "Investment parameters: stage={stage}, check_size={check_size}, horizon={horizon}\n\n"
     "Context (numbered, cite as [1], [2]…):\n{context}\n\n"
-    "Return JSON keys:\n"
-    "- verdict: \"Consider\" | \"Watchlist\" | \"Pass\"\n"
-    "- scores: {team, problem, market, moat, traction, gtm, unit_economics, risks}\n"
-    "- pros: [2-3 bullets with [#] citations]\n"
-    "- cons: [2-3 bullets with [#] citations]\n"
-    "- key_metrics: [1-3 items]\n"
-    "- biggest_risks: [1-2 bullets]\n"
-    "- fit_for_profile: \"1-2 sentences referencing stage/check_size\"\n"
-    "- disclaimer: short non-advisory note"
+    "Return ONLY valid JSON with these exact keys:\n"
+    "{{\n"
+    '  "verdict": "Consider" | "Watchlist" | "Pass",\n'
+    '  "scores": {{\n'
+    '    "team": 0-5,\n'
+    '    "problem": 0-5,\n'
+    '    "market": 0-5,\n'
+    '    "moat": 0-5,\n'
+    '    "traction": 0-5,\n'
+    '    "gtm": 0-5,\n'
+    '    "unit_economics": 0-5,\n'
+    '    "risks": 0-5\n'
+    '  }},\n'
+    '  "pros": ["bullet 1 [1]", "bullet 2 [2]"],\n'
+    '  "cons": ["bullet 1 [1]", "bullet 2 [2]"],\n'
+    '  "key_metrics": ["metric 1", "metric 2"],\n'
+    '  "biggest_risks": ["risk 1", "risk 2"],\n'
+    '  "fit_for_profile": "1-2 sentences about fit",\n'
+    '  "disclaimer": "This is not investment advice"\n'
+    "}}"
 )
 
 
